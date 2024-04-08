@@ -5,32 +5,65 @@ import Button1 from "../../components/Buttons/Button1";
 import { FaGithub } from 'react-icons/fa';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
+import Swal from 'sweetalert2';
+import 'animate.css';
 
 
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
-  const {loginUser} = useContext(AuthContext);
+  const {user, loginUser} = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const [success, setSuccess] = useState(null);
+  
 
   const handleLogin = (e) => {
     e.preventDefault();
+    setErrorMessage("");
+
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
 
+    if(!email.endsWith(".com")){
+      setErrorMessage("Invalid Email");
+      return;
+    }
+
     loginUser(email,password)
     .then(result=> {
-      // console.log(result.user);
+
+      //to display success message
+      Swal.fire({
+        icon: "success",
+        title: "Login Successful",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
     })
     .catch(error=>{
-      console.log(error.code);
+      if(error.code === "auth/invalid-credential"){
+        setErrorMessage("Invalid email/password.")
+      }
     })
 
   }
 
   return (
       <div className="bg-[var(--bg-secondary)] min-h-screen flex items-center justify-center">
-        <div className="md:w-1/2 max-w-xl mx-auto px-8 md:px-8 lg:px-12 xl:px-16">
+        <div className="md:w-1/2 max-w-xl mx-auto px-8 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
           {/* Welcome section */}
           <div className="bg-[#4a435f] relative  shadow-xl rounded-t-2xl">
             <img
@@ -42,10 +75,11 @@ const Login = () => {
 
           {/* form section */}
           <div className="bg-white px-8 pb-8 w-full items-center py-6 rounded-md">
-            <form className="w-full" onSubmit={handleLogin}>            
+            <form className="w-full" onSubmit={handleLogin}> 
               <h2 className="mt-8 mb-6">
                 Please Login
               </h2>
+                         
 
               <div className="relative w-full z-0 mb-6 group">
                 <input
@@ -79,6 +113,8 @@ const Login = () => {
                   Enter Your Password
                 </label>
               </div>
+
+              <p className='text-red-500 text-center'>{errorMessage}</p>
                 
                 <Button1  btnLink="Login" classes="w-full py-2 mt-4"></Button1>
         

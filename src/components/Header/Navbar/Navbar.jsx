@@ -6,19 +6,17 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
-  const {user, logOutUser} = useContext(AuthContext);
-
-
+  const { user, logOutUser } = useContext(AuthContext);
 
   const handleLogout = () => {
     logOutUser()
-    .then(()=>{
-      alert("Logout Successful");
-    })
-    .catch(error=> {
-      alert(error.code);
-    })
-  }
+      .then(() => {
+        alert("Logout Successful");
+      })
+      .catch((error) => {
+        alert(error.code);
+      });
+  };
 
   const menuLists = (
     <>
@@ -30,20 +28,35 @@ const Navbar = () => {
       </li>
     </>
   );
-  const loginBtnLink = <>
-    <Link to="/login">Login</Link>
-  </>;
-  const logoutBtnLink = <>
-    <Link onClick={handleLogout}>Logout</Link>
-  </>;
+  const loginBtnLink = (
+    <>
+      <Link to="/login">Login</Link>
+    </>
+  );
+  const logoutBtnLink = (
+    <>
+      <Link onClick={handleLogout}>Logout</Link>
+    </>
+  );
+
+  const userName = user?.displayName
+    ? user.displayName
+    : "Update Your Name";
+  const userPhoto = user?.photoURL
+    ? user.photoURL
+    : "https://i.ibb.co/kg3gz62/c0749b7cc401421662ae901ec8f9f660-removebg-preview.png";
 
   return (
-    <nav className="bg-[var(--bg-primary)] py-4 shadow-sm">
+    <nav className="z-20 bg-[var(--bg-primary)] py-4 shadow-sm fixed w-full">
       <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] navbar flex justify-between">
         <div className="flex gap-2 items-center">
           <div className="dropdown lg:hidden">
-            <div tabIndex={0} role="button" className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] bg-[var(--clr-accent)] rounded text-white hover:text-[var(--clr-accent)] hover:bg-transparent">
-            <BsMenuUp />
+            <div
+              tabIndex={0}
+              role="button"
+              className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] bg-[var(--clr-accent)] rounded text-white hover:text-[var(--clr-accent)] hover:bg-transparent"
+            >
+              <BsMenuUp />
             </div>
 
             <ul
@@ -63,26 +76,22 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
-       
-          {
-            user ?
-              <div className="flex gap-3 items-center"> 
-                  <div className="tooltip tooltip-left" data-tip="Mahbubur Rahman">
-            <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
-              <img
-                src="https://i.ibb.co/kg3gz62/c0749b7cc401421662ae901ec8f9f660-removebg-preview.png"
-                alt=""
-                className="rounded-full h-full"
-              />
+        {user ? (
+          <div className="flex gap-3 items-center">
+            <div className="tooltip tooltip-left" data-tip={userName}>
+              <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
+                <img
+                  src={userPhoto}
+                  alt="User Photo"
+                  className="rounded-full h-full"
+                />
+              </div>
             </div>
-                  </div>
-                  <Button1 btnLink={logoutBtnLink}></Button1>
-             </div>
-  : 
-             <Button1 btnLink={loginBtnLink}></Button1>
-          }
-
-     
+            <Button1 btnLink={logoutBtnLink}></Button1>
+          </div>
+        ) : (
+          <Button1 btnLink={loginBtnLink}></Button1>
+        )}
       </div>
     </nav>
   );

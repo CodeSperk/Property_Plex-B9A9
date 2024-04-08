@@ -3,31 +3,68 @@ import Button1 from "../../components/Buttons/Button1";
 import { useContext, useState } from "react";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AuthContext } from "../../provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import Swal from 'sweetalert2';
+import 'animate.css';
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const {createUser, logOutUser} = useContext(AuthContext);
-
+  const [error, setError] = useState(null);
 
 
   const handleLogin = (e) => {
     e.preventDefault();
+    setError("");
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const photoUrl = form.photoUrl.value;
     const password = form.password.value;
-    console.log(name, email, photoUrl, password);
+    if(!/[A-Z]/.test(password)){
+      setError("Password must contain an uppercase letter");
+      return;
+    } if(!/[a-z]/.test(password)){
+      setError("Password must contain an lowercase letter");
+      return;
+    } if (password.length<6){
+      setError("Password must be at least 6 characters.");
+      return;
+    }
+
 
     createUser(email, password)
     .then(result=>{
       // console.log(result.user);
+
+      // To update user name and photo  url
+      updateProfile(result.user, {
+        displayName: name, photoURL: photoUrl
+      }).then().catch(error => {alert(error.code)});
+
+      //To display success message
+      Swal.fire({
+        icon: "success",
+        title: "Registration Successful",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+
       //To prevent auto login after registration
-      logOutUser()
-      .then()
-      .catch(error=>{
-        console.log(error.code);
-      })
+      logOutUser().then().catch(error=>{console.log(error.code);
+      });
     })
     .catch(error=> {
       console.log(error.code);
@@ -38,7 +75,7 @@ const Register = () => {
 
   return (
     <div className="bg-[var(--bg-secondary)] min-h-screen flex items-center justify-center">
-    <div className="md:w-1/2 max-w-xl mx-auto px-8 md:px-8 lg:px-12 xl:px-16">
+    <div className="md:w-1/2 max-w-xl mx-auto px-8 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
       {/* Welcome section */}
       <div className="bg-[#4a435f] relative  shadow-xl rounded-t-2xl">
         <img
@@ -117,7 +154,7 @@ const Register = () => {
               Enter Your Password
             </label>
           </div>
-            
+          <p className='text-red-500 text-center'>{error}</p>
             <Button1  btnLink="Register" classes="w-full py-2 mt-4"></Button1>
     
 

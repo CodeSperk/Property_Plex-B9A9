@@ -1,7 +1,7 @@
 const UpdateProfile = () => {
   return (
     <div>
-      <p>This is the update profile</p>
+      <p className="pt-36">This is the update profile</p>
     </div>
   );
 };
