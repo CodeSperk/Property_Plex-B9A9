@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="bg-[var(--bg-primary)] py-4 shadow-sm">
       <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] navbar flex justify-between">
         <div className="flex gap-2 items-center">
-          <div className="dropdown">
+          <div className="dropdown lg:hidden">
             <div tabIndex={0} role="button" className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] bg-[var(--clr-accent)] rounded text-white hover:text-[var(--clr-accent)] hover:bg-transparent">
             <BsMenuUp />
             </div>
