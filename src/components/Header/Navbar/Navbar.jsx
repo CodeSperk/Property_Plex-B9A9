@@ -4,14 +4,35 @@ import { BsMenuUp } from "react-icons/bs";
 import Button1 from "../../Buttons/Button1";
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
+import Swal from 'sweetalert2';
+import 'animate.css';
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
+  
+
 
   const handleLogout = () => {
     logOutUser()
       .then(() => {
-        alert("Logout Successful");
+        Swal.fire({
+          icon: "Success",
+          title: "Logout Successful",
+          showClass: {
+            popup: `
+              animate__animated
+              animate__fadeInUp
+              animate__faster
+            `
+          },
+          hideClass: {
+            popup: `
+              animate__animated
+              animate__fadeOutDown
+              animate__faster
+            `
+          }
+        });
       })
       .catch((error) => {
         alert(error.code);

@@ -1,6 +1,6 @@
 import { FcGoogle } from 'react-icons/fc';
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button1 from "../../components/Buttons/Button1";
 import { FaGithub } from 'react-icons/fa';
 import { useContext, useState } from 'react';
@@ -12,10 +12,33 @@ import 'animate.css';
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
-  const {user, loginUser} = useContext(AuthContext);
+  const { user, loginUser, googleLogin, githubLogin} = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState(null);
-  
+  const navigate = useNavigate();
 
+
+  const handleSuccess = (icon="", title="") => {
+    Swal.fire({
+      icon: icon,
+      title: title,
+      showClass: {
+        popup: `
+          animate__animated
+          animate__fadeInUp
+          animate__faster
+        `
+      },
+      hideClass: {
+        popup: `
+          animate__animated
+          animate__fadeOutDown
+          animate__faster
+        `
+      }
+    });
+  }
+
+// Login with email and password
   const handleLogin = (e) => {
     e.preventDefault();
     setErrorMessage("");
@@ -35,33 +58,32 @@ const Login = () => {
       form.reset();
 
       //to display success message
-      Swal.fire({
-        icon: "success",
-        title: "Login Successful",
-        showClass: {
-          popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `
-        },
-        hideClass: {
-          popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `
-        }
-      });
+        handleSuccess("success", "Login Successful");
+
+      //navigate to login page
+      navigate("/");
     })
     .catch(error=>{
       if(error.code === "auth/invalid-credential"){
         setErrorMessage("Invalid email/password.")
       }
     })
-
   }
 
+// Login with google
+  const handleGoogleLogin = () => {
+    !user && googleLogin().then(()=> {
+      handleSuccess("success", "Login Success");
+      navigate("/");
+    }).catch(error=>console.log(error.code));
+  }
+// Login with Github
+  const handleGitHubLogin = () => {
+    !user && githubLogin().then(()=> {
+      handleSuccess("success", "Login Success");
+      navigate("/");
+    }).catch(error=>console.log(error.code));
+  }
   return (
       <div className="bg-[var(--bg-secondary)] min-h-screen flex items-center justify-center">
         <div className="md:w-1/2 max-w-xl mx-auto px-8 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
@@ -134,8 +156,8 @@ const Login = () => {
                   className="w-full mx-auto rounded  font-semibold text-center gap-4"
                 >
                  <div className='flex justify-between gap-4 mt-2 '>
-                 <FcGoogle className="ml-2 text-4xl border-2 border-[var(--clr-accent)] p-1 h-10 cursor-pointer bg-[var(--bg-secondary)] w-1/2 hover:bg-[var(--clr-accent)] rounded"/> 
-                  <FaGithub className="ml-2 text-4xl border-2 border-[var(--clr-accent)] p-1 h-10 cursor-pointer bg-[var(--bg-secondary)] w-1/2 hover:bg-[var(--clr-accent)] rounded"/>
+                 <FcGoogle className="ml-2 text-4xl border-2 border-[var(--clr-accent)] p-1 h-10 cursor-pointer bg-[var(--bg-secondary)] w-1/2 hover:bg-[var(--clr-accent)] rounded" onClick={handleGoogleLogin}/> 
+                  <FaGithub className="ml-2 text-4xl border-2 border-[var(--clr-accent)] p-1 h-10 cursor-pointer bg-[var(--bg-secondary)] w-1/2 hover:bg-[var(--clr-accent)] rounded" onClick={handleGitHubLogin}/>
                  </div>
                   
             </div>
