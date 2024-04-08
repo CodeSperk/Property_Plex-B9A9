@@ -42,6 +42,10 @@ const Register = () => {
         displayName: name, photoURL: photoUrl
       }).then().catch(error => {alert(error.code)});
 
+      // To clear the form after successful registration
+      form.reset();
+
+
       //To display success message
       Swal.fire({
         icon: "success",
@@ -67,7 +71,9 @@ const Register = () => {
       });
     })
     .catch(error=> {
-      console.log(error.code);
+      if(error.code === "auth/email-already-in-use"){
+        setError("Already registered with this email");
+      }
     })
   }
 

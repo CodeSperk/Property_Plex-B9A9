@@ -14,7 +14,6 @@ const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const {user, loginUser} = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [success, setSuccess] = useState(null);
   
 
   const handleLogin = (e) => {
@@ -32,6 +31,8 @@ const Login = () => {
 
     loginUser(email,password)
     .then(result=> {
+      // clear the form alfet login
+      form.reset();
 
       //to display success message
       Swal.fire({
