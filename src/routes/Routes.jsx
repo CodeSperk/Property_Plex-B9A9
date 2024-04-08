@@ -1,7 +1,10 @@
+import { element } from "prop-types";
 import MainLayout from "../layouts/MainLayout";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Home from "../pages/Home/Home";
 import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
+import Login from "../pages/login/Login";
+import Register from "../pages/register/Register";
 
 const routes = [
   {
@@ -12,6 +15,14 @@ const routes = [
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/register",
+        element:<Register></Register>
+      },
+      {
+        path:"/login",
+        element:<Login></Login>
       },
       {
         path:"/update",

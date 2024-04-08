@@ -10,8 +10,8 @@
   --clr-secondary: #A0A2AF;
 
   --clr-accent: #7065F0;
-  --bg-primary: #E5E3F8;
-  --bg-secondary: #F7F7FD;
+  --bg-primary: #F7F7FD;
+  --bg-secondary: #E5E3F8;
 }
 
 :root {
@@ -30,9 +30,9 @@
 
 body {
   font-family: var(--font-secondary);
-  color: var(--clr-primary-light);
-  background-color: var(--bg-primary-light);
-  font-size: 0.825rem;
+  color: var(--clr-primary);
+  background-color: var(--bg-primary);
+  font-size: 0.875rem;
   line-height: 1.6;
 }
 section {
@@ -50,9 +50,8 @@ img{
 }
 
 h1, h2, h3, h4 {
-  color: var(--clr-heading-light);
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--font-primary);
 }
 
 h1 {
@@ -61,7 +60,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: 1.3;
 }
 
@@ -91,7 +91,7 @@ h4 {
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
 
   h3 {

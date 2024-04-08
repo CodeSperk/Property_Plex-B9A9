@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
+import { BsMenuUp } from "react-icons/bs";
+import Button1 from "../../Buttons/Button1";
 
 const Navbar = () => {
   const menuLists = (
@@ -13,31 +15,23 @@ const Navbar = () => {
     </>
   );
 
+
+  const loginBtnLink = <>
+    <Link to="/login">Login</Link>
+  </>;
+
   return (
-    <nav className="bg-[var(--bg-primary)] py-4">
-      <div className="navbar flex justify-between">
-        <div className="">
+    <nav className="bg-[var(--bg-primary)] py-4 shadow-sm">
+      <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] navbar flex justify-between">
+        <div className="flex gap-2 items-center">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <div tabIndex={0} role="button" className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] bg-[var(--clr-accent)] rounded text-white hover:text-[var(--clr-accent)] hover:bg-transparent">
+            <BsMenuUp />
             </div>
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] px-4 py-6 shadow bg-[var(--bg-primary)] rounded-box w-52"
             >
               {menuLists}
             </ul>
@@ -53,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex gap-3 items-center">
-          
+
           <div className="tooltip tooltip-left" data-tip="Mahbubur Rahman">
             <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
               <img
@@ -63,10 +57,8 @@ const Navbar = () => {
               />
             </div>
           </div>
+          <Button1 btnLink={loginBtnLink}></Button1>
 
-          <button className="py-1.5 px-4 md:px-5 bg-[var(--clr-accent)] border-2 border-transparent hover:bg-[var(--bg-primary)] hover:border-[var(--clr-accent)] hover:text-[var(--clr-accent)] text-white font-semibold rounded tracking-wider">
-            <Link>Login</Link>
-          </button>
         </div>
       </div>
     </nav>
