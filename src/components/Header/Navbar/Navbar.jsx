@@ -6,9 +6,19 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext);
-  console.log(user);
+  const {user, logOutUser} = useContext(AuthContext);
 
+
+
+  const handleLogout = () => {
+    logOutUser()
+    .then(()=>{
+      alert("Logout Successful");
+    })
+    .catch(error=> {
+      alert(error.code);
+    })
+  }
 
   const menuLists = (
     <>
@@ -20,10 +30,11 @@ const Navbar = () => {
       </li>
     </>
   );
-
-
   const loginBtnLink = <>
     <Link to="/login">Login</Link>
+  </>;
+  const logoutBtnLink = <>
+    <Link onClick={handleLogout}>Logout</Link>
   </>;
 
   return (
@@ -52,9 +63,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
-        <div className="flex gap-3 items-center">
-
-          <div className="tooltip tooltip-left" data-tip="Mahbubur Rahman">
+       
+          {
+            user ?
+              <div className="flex gap-3 items-center"> 
+                  <div className="tooltip tooltip-left" data-tip="Mahbubur Rahman">
             <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
               <img
                 src="https://i.ibb.co/kg3gz62/c0749b7cc401421662ae901ec8f9f660-removebg-preview.png"
@@ -62,10 +75,14 @@ const Navbar = () => {
                 className="rounded-full h-full"
               />
             </div>
-          </div>
-          <Button1 btnLink={loginBtnLink}></Button1>
+                  </div>
+                  <Button1 btnLink={logoutBtnLink}></Button1>
+             </div>
+  : 
+             <Button1 btnLink={loginBtnLink}></Button1>
+          }
 
-        </div>
+     
       </div>
     </nav>
   );
