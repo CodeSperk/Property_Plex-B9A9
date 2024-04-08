@@ -3,14 +3,28 @@ import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Button1 from "../../components/Buttons/Button1";
 import { FaGithub } from 'react-icons/fa';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
 
 
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
+  const {loginUser} = useContext(AuthContext);
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    loginUser(email,password)
+    .then(result=> {
+      // console.log(result.user);
+    })
+    .catch(error=>{
+      console.log(error.code);
+    })
 
   }
 

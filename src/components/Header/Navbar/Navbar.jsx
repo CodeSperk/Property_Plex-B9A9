@@ -2,8 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
 import { BsMenuUp } from "react-icons/bs";
 import Button1 from "../../Buttons/Button1";
+import { useContext } from "react";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext);
+  console.log(user);
+
+
   const menuLists = (
     <>
       <li>
