@@ -1,10 +1,40 @@
 import { Link } from "react-router-dom";
 import Button1 from "../../components/Buttons/Button1";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
+  const {createUser, logOutUser} = useContext(AuthContext);
+
+
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photoUrl = form.photoUrl.value;
+    const password = form.password.value;
+    console.log(name, email, photoUrl, password);
+
+    createUser(email, password)
+    .then(result=>{
+      console.log(result.user);
+      //To prevent auto login after registration
+      logOutUser()
+      .then()
+      .catch(error=>{
+        console.log(error.code);
+      })
+    })
+    .catch(error=> {
+      console.log(error.code);
+    })
+  }
+
+
 
   return (
     <div className="bg-[var(--bg-secondary)] min-h-screen flex items-center justify-center">
@@ -20,7 +50,7 @@ const Register = () => {
 
       {/* form section */}
       <div className="bg-white px-8 pb-8 w-full items-center py-6 rounded-md">
-        <form className="w-full">            
+        <form className="w-full" onSubmit={handleLogin}>            
           <h2 className="mt-8 mb-6">
             Please Register
           </h2>
