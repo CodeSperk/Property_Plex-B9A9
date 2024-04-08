@@ -1,0 +1,14 @@
+.navbar .menu li a{
+  background: transparent;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.navbar .menu li a.active, .navbar .menu li a.active:hover, li:hover{
+  color:var(--clr-accent);
+  background: transparent;
+}
+.navbar .menu:hover a.active{
+  color:var(--clr-primary);
+  background: transparent;
+}
+

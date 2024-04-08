@@ -1,6 +1,7 @@
 import MainLayout from "../layouts/MainLayout";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Home from "../pages/Home/Home";
+import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 
 const routes = [
   {
@@ -12,6 +13,10 @@ const routes = [
         path:"/",
         element:<Home></Home>
       },
+      {
+        path:"/update",
+        element:<UpdateProfile></UpdateProfile>
+      }
     ]
     
     
