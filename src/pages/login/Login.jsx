@@ -1,6 +1,6 @@
 import { FcGoogle } from 'react-icons/fc';
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Button1 from "../../components/Buttons/Button1";
 import { FaGithub } from 'react-icons/fa';
 import { useContext, useState } from 'react';
@@ -15,6 +15,8 @@ const Login = () => {
   const { user, loginUser, googleLogin, githubLogin} = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  // console.log(location);
 
 
   const handleSuccess = (icon="", title="") => {
@@ -61,7 +63,7 @@ const Login = () => {
         handleSuccess("success", "Login Successful");
 
       //navigate to login page
-      navigate("/");
+      navigate(location.state? location.state : "/");
     })
     .catch(error=>{
       if(error.code === "auth/invalid-credential"){
@@ -74,14 +76,14 @@ const Login = () => {
   const handleGoogleLogin = () => {
     !user && googleLogin().then(()=> {
       handleSuccess("success", "Login Success");
-      navigate("/");
+      navigate(location.state? location.state : "/");
     }).catch(error=>console.log(error.code));
   }
 // Login with Github
   const handleGitHubLogin = () => {
     !user && githubLogin().then(()=> {
       handleSuccess("success", "Login Success");
-      navigate("/");
+      navigate(location.state? location.state : "/");
     }).catch(error=>console.log(error.code));
   }
   return (

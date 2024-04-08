@@ -1,0 +1,95 @@
+{
+  "speciality_estates": [
+    {
+      "id": 1,
+      "estate_title": "Contemporary Art Gallery",
+      "segment_name": "Art Gallery",
+      "description": "Explore the vibrant world of contemporary art in this spacious gallery located in the heart of downtown. Featuring stunning artworks from both local and international artists, this gallery offers a unique cultural experience. With its versatile spaces and modern amenities, it's an ideal venue for exhibitions, events, and art lovers alike.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Downtown",
+      "facilities": ["Gallery Space", "Parking Lot", "Cafeteria"],
+      "image": ["art_gallery1.jpg", "art_gallery1_2.jpg", "art_gallery1_3.jpg", "art_gallery1_4.jpg"],
+      "banner": "art_gallery_banner.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Versatile Art Gallery",
+      "segment_name": "Art Gallery",
+      "description": "Step into a world of artistic inspiration at this versatile gallery. With its spacious interiors and natural lighting, it provides the perfect backdrop for showcasing a diverse range of artworks. Whether you're an artist, collector, or enthusiast, this gallery offers a dynamic space for exhibitions, events, and creative collaborations.",
+      "price": "$700,000",
+      "status": "sale",
+      "area": "7000 sq ft",
+      "location": "Arts District",
+      "facilities": ["Exhibition Halls", "Conference Rooms", "Restrooms"],
+      "image": ["art_gallery2.jpg", "art_gallery2_2.jpg", "art_gallery2_3.jpg", "art_gallery2_4.jpg"],
+      "banner": "art_gallery2_banner.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Local Art Gallery",
+      "segment_name": "Art Gallery",
+      "description": "Discover the essence of local artistry in this charming gallery nestled in the suburbs. Showcasing a curated selection of works by talented regional artists, it offers a cozy and intimate setting for art enthusiasts to explore and appreciate. Perfect for hosting exhibitions, workshops, and community events.",
+      "price": "$2,500/month",
+      "status": "rent",
+      "area": "1500 sq ft",
+      "location": "Suburb",
+      "facilities": ["Art Storage", "Wi-Fi", "Security System"],
+      "image": ["art_gallery3.jpg", "art_gallery3_2.jpg", "art_gallery3_3.jpg", "art_gallery3_4.jpg"],
+      "banner": "art_gallery3_banner.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Urban Convention Center",
+      "segment_name": "Convention Center",
+      "description": "Host your next event in style at this state-of-the-art convention center located in the bustling city center. Equipped with spacious auditoriums, versatile meeting rooms, and catering services, it offers everything you need for a successful gathering. From corporate conferences to grand celebrations, this venue sets the stage for memorable experiences.",
+      "price": "$10,000/day",
+      "status": "rent",
+      "area": "20000 sq ft",
+      "location": "City Center",
+      "facilities": ["Auditorium", "Meeting Rooms", "Catering Services"],
+      "image": ["convention_center1.jpg", "convention_center1_2.jpg", "convention_center1_3.jpg", "convention_center1_4.jpg"],
+      "banner": "convention_center1_banner.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Grand Convention Center",
+      "segment_name": "Convention Center",
+      "description": "Elevate your events to new heights at this grand convention center situated on the outskirts. Boasting expansive exhibition halls, a majestic banquet hall, and ample parking, it offers unparalleled flexibility and convenience for large-scale gatherings. Whether it's trade shows, weddings, or conferences, this venue ensures a memorable experience for all.",
+      "price": "$2,000,000",
+      "status": "sale",
+      "area": "50000 sq ft",
+      "location": "Outskirts",
+      "facilities": ["Exhibition Halls", "Banquet Hall", "Parking"],
+      "image": ["convention_center2.jpg", "convention_center2_2.jpg", "convention_center2_3.jpg", "convention_center2_4.jpg"],
+      "banner": "convention_center2_banner.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Sacred Gathering Place",
+      "segment_name": "Religious Services",
+      "description": "Experience serenity and spirituality at this sacred gathering place nestled in a suburban oasis. With its tranquil prayer halls, versatile meeting rooms, and ample parking, it provides the perfect environment for religious ceremonies, retreats, and community gatherings. Embrace the essence of tradition and unity in this peaceful sanctuary.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "3000 sq ft",
+      "location": "Suburban Area",
+      "facilities": ["Prayer Hall", "Meeting Rooms", "Parking"],
+      "image": ["religious_service_center.jpg", "religious_service_center_2.jpg", "religious_service_center_3.jpg", "religious_service_center_4.jpg"],
+      "banner": "religious_service_center_banner.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Modern Hospital",
+      "segment_name": "Hospital",
+      "description": "Providing cutting-edge healthcare in a contemporary setting, this modern hospital is equipped with state-of-the-art medical facilities and compassionate staff. From emergency care to specialized treatments, it delivers comprehensive healthcare services to the community. With spacious patient rooms, advanced operating theaters, and extensive amenities, it prioritizes patient comfort and well-being.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "60000 sq ft",
+      "location": "Medical District",
+      "facilities": ["Emergency Room", "Operating Theaters", "Patient Rooms"],
+      "image": ["hospital.jpg", "hospital_2.jpg", "hospital_3.jpg", "hospital_4.jpg"],
+      "banner": "hospital_banner.jpg"
+    }
+  ]
+}
