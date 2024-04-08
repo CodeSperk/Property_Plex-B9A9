@@ -1,3 +1,4 @@
+import PrivateRout from "../hooks/PrivateRout";
 import MainLayout from "../layouts/MainLayout";
 import ErrorPage from "../pages/Error/ErrorPage";
 import Home from "../pages/Home/Home";
@@ -25,7 +26,7 @@ const routes = [
       },
       {
         path:"/update",
-        element:<UpdateProfile></UpdateProfile>,
+        element:<PrivateRout> <UpdateProfile></UpdateProfile> </PrivateRout>,
       },
     ]
     
