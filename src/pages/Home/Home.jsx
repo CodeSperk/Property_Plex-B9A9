@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import EstateCard from "./EstateCard/EstateCard";
 const Home = () => {
   const { speciality_estates } = useLoaderData();
-  console.log(speciality_estates);
+  // console.log(speciality_estates);
 
   return (
     <div className="pt-36">

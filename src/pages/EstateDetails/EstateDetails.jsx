@@ -9,7 +9,9 @@ const EstateDetails = () => {
 
   return (
     <div className="pt-24">
-      News Details .....
+      <h1>{targetedEstate.estate_title}</h1>
+      <img src={targetedEstate.banner} alt="" />
+      
     </div>
   );
 };

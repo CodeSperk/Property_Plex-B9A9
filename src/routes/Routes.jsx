@@ -33,7 +33,7 @@ const routes = [
       },
       {
         path:"/estate/:id",
-        element:<EstateDetails></EstateDetails>,
+        element:<PrivateRout> <EstateDetails></EstateDetails> </PrivateRout>,
         loader: (props) => fetch("/speciality_estates.json")
       }
     ]

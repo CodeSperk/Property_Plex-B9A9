@@ -11,7 +11,7 @@
       "location": "Downtown",
       "facilities": ["Gallery Space", "Parking Lot", "Cafeteria"],
       "image": ["art_gallery1.jpg", "art_gallery1_2.jpg", "art_gallery1_3.jpg", "art_gallery1_4.jpg"],
-      "banner": "art_gallery_banner.jpg"
+      "banner": "https://i.ibb.co/h73Hskn/banner-art.jpg"
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
       "location": "Arts District",
       "facilities": ["Exhibition Halls", "Conference Rooms", "Restrooms"],
       "image": ["art_gallery2.jpg", "art_gallery2_2.jpg", "art_gallery2_3.jpg", "art_gallery2_4.jpg"],
-      "banner": "art_gallery2_banner.jpg"
+      "banner": "https://i.ibb.co/h73Hskn/banner-art.jpg"
     },
     {
       "id": 3,
@@ -37,7 +37,7 @@
       "location": "Suburb",
       "facilities": ["Art Storage", "Wi-Fi", "Security System"],
       "image": ["art_gallery3.jpg", "art_gallery3_2.jpg", "art_gallery3_3.jpg", "art_gallery3_4.jpg"],
-      "banner": "art_gallery3_banner.jpg"
+      "banner": "https://i.ibb.co/h73Hskn/banner-art.jpg"
     },
     {
       "id": 4,
@@ -50,7 +50,7 @@
       "location": "City Center",
       "facilities": ["Auditorium", "Meeting Rooms", "Catering Services"],
       "image": ["convention_center1.jpg", "convention_center1_2.jpg", "convention_center1_3.jpg", "convention_center1_4.jpg"],
-      "banner": "convention_center1_banner.jpg"
+      "banner": "https://i.ibb.co/dcmyVfM/banner-convention.jpg"
     },
     {
       "id": 5,
@@ -63,7 +63,7 @@
       "location": "Outskirts",
       "facilities": ["Exhibition Halls", "Banquet Hall", "Parking"],
       "image": ["convention_center2.jpg", "convention_center2_2.jpg", "convention_center2_3.jpg", "convention_center2_4.jpg"],
-      "banner": "convention_center2_banner.jpg"
+      "banner": "https://i.ibb.co/dcmyVfM/banner-convention.jpg"
     },
     {
       "id": 6,
@@ -76,7 +76,7 @@
       "location": "Suburban Area",
       "facilities": ["Prayer Hall", "Meeting Rooms", "Parking"],
       "image": ["religious_service_center.jpg", "religious_service_center_2.jpg", "religious_service_center_3.jpg", "religious_service_center_4.jpg"],
-      "banner": "religious_service_center_banner.jpg"
+      "banner": "https://i.ibb.co/GHHf4RM/banner-religious.jpg"
     },
     {
       "id": 7,
@@ -89,7 +89,7 @@
       "location": "Medical District",
       "facilities": ["Emergency Room", "Operating Theaters", "Patient Rooms"],
       "image": ["hospital.jpg", "hospital_2.jpg", "hospital_3.jpg", "hospital_4.jpg"],
-      "banner": "hospital_banner.jpg"
+      "banner": "https://i.ibb.co/VLn4qhq/banner-hospital.jpg"
     }
   ]
 }
