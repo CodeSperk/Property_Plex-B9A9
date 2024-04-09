@@ -1,11 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import "./navbar.css";
-import { BsMenuUp } from "react-icons/bs";
 import Button1 from "../../Buttons/Button1";
 import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import Swal from 'sweetalert2';
 import 'animate.css';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -75,9 +75,9 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] bg-[var(--clr-accent)] rounded text-white hover:text-[var(--clr-accent)] hover:bg-transparent"
+              className="text-2xl mb-2 border-2 p-1 border-[var(--clr-accent)] rounded hover:text-[--clr-accent]"
             >
-              <BsMenuUp />
+              <GiHamburgerMenu />
             </div>
 
             <ul
@@ -88,17 +88,18 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Link to="/" className="text-[var(--clr-accent)] font-semibold">
-            <h3>PropertyPlex</h3>
+          <Link to="/" className="company-name font-semibold">
+            <h3 className="relative px-4 py-2 text-2xl animate__animated animate__backInLeft   animate__slower">PropertyPlex</h3>
           </Link>
         </div>
+        
 
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex animate__animated animate__backInDown  animate__slower">
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
         {user ? (
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-3 items-center animate__animated animate__backInRight   animate__slower">
             <div className="tooltip tooltip-left" data-tip={userName}>
               <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
                 <img
