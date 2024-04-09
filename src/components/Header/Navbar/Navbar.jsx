@@ -10,8 +10,6 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
   
-
-
   const handleLogout = () => {
     logOutUser()
       .then(() => {
@@ -68,9 +66,9 @@ const Navbar = () => {
     : "https://i.ibb.co/kg3gz62/c0749b7cc401421662ae901ec8f9f660-removebg-preview.png";
 
   return (
-    <nav className="z-20 bg-[var(--bg-primary)] py-4 shadow-sm fixed w-full">
+    <nav className="z-50 bg-white py-2 md:py-3 bg-opacity-60 shadow-sm fixed w-full">
       <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] navbar flex justify-between">
-        <div className="flex gap-2 items-center">
+        <div className="flex items-center animate__animated animate__backInLeft   animate__slower">
           <div className="dropdown lg:hidden">
             <div
               tabIndex={0}
@@ -89,17 +87,18 @@ const Navbar = () => {
           </div>
 
           <Link to="/" className="company-name font-semibold">
-            <h3 className="relative px-4 py-2 text-2xl animate__animated animate__backInLeft   animate__slower">PropertyPlex</h3>
+            <h3 className="relative px-4 py-2 text-2xl text-[var(--clr-accent)]">PropertyPlex</h3>
           </Link>
         </div>
         
 
-        <div className="hidden lg:flex animate__animated animate__backInDown  animate__slower">
+        <div className="hidden lg:flex animate__animated animate__backInDown  animate__zoomIn animate__slower">
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
+        <div className="animate__animated animate__backInRight   animate__slower">
         {user ? (
-          <div className="flex gap-3 items-center animate__animated animate__backInRight   animate__slower">
+          <div className="flex gap-3 items-center">
             <div className="tooltip tooltip-left" data-tip={userName}>
               <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
                 <img
@@ -114,6 +113,7 @@ const Navbar = () => {
         ) : (
           <Button1 btnLink={loginBtnLink}></Button1>
         )}
+        </div>
       </div>
     </nav>
   );

@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import 'animate.css';
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const {user, updateUser} = useContext(AuthContext);
@@ -51,9 +52,13 @@ const UpdateProfile = () => {
 
   return (
     <div className="bg-[var(--bg-primary)] min-h-screen flex items-center justify-center">
-    <div className="md:w-2/3 lg:1/2 max-w-xl mx-auto px-3 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
+      <Helmet>
+        <title>PropertyPlex | Update </title>
+      </Helmet>
+
+    <div className="w-full md:w-2/3 lg:1/2 max-w-xl mx-auto px-3 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
       {/* form section */}
-      <div className="bg-white p-8 pb-8 w-full items-center rounded-md">
+      <div className="bg-white p-10 pt-12 w-full max-w-lg items-center rounded-lg">
         <form className="w-full space-y-6" onSubmit={handleUpdate}>
           <h3 className="mb-8 text-center">Update  Your Profile</h3>
 {/* name field */}

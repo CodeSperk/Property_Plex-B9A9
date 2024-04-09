@@ -7,6 +7,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import Swal from 'sweetalert2';
 import 'animate.css';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -88,7 +89,11 @@ const Login = () => {
   }
   return (
       <div className="bg-[var(--bg-primary)] min-h-screen flex items-center justify-center">
-        <div className="md:w-2/3 lg:1/2 max-w-xl mx-auto px-3 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
+        <Helmet>
+          <title>PropertyPlex | Login </title>
+        </Helmet>
+
+        <div className="md:w-2/3 lg:1/2 max-w-lg mx-auto px-3 md:px-8 lg:px-12 xl:px-16 mt-28 mb-8">
           {/* Welcome section */}
           <div className="bg-[#4a435f] relative  shadow-xl rounded-t-2xl">
             <img

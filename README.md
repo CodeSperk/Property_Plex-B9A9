@@ -14,6 +14,8 @@
 - react-icons
 - sweet alert2
 - animate.css
+- swiper slider
+- helmet async
 
 
 
