@@ -68,7 +68,7 @@ const Navbar = () => {
   return (
     <nav className="z-50 bg-white py-2 md:py-3 bg-opacity-60 shadow-sm fixed w-full">
       <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] navbar flex justify-between">
-        <div className="flex items-center animate__animated animate__backInLeft   animate__slower">
+        <div className="flex items-center">
           <div className="dropdown lg:hidden">
             <div
               tabIndex={0}
@@ -92,11 +92,11 @@ const Navbar = () => {
         </div>
         
 
-        <div className="hidden lg:flex animate__animated animate__backInDown  animate__zoomIn animate__slower">
+        <div className="hidden lg:flex animate__animated animate__backInDown animate__slower">
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
-        <div className="animate__animated animate__backInRight   animate__slower">
+       
         {user ? (
           <div className="flex gap-3 items-center">
             <div className="tooltip tooltip-left" data-tip={userName}>
@@ -114,7 +114,7 @@ const Navbar = () => {
           <Button1 btnLink={loginBtnLink}></Button1>
         )}
         </div>
-      </div>
+   
     </nav>
   );
 };

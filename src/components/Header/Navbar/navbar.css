@@ -1,3 +1,6 @@
+.navbar{
+  z-index: 1000;
+}
 .navbar .menu li a{
   background: transparent;
   font-weight: 600;

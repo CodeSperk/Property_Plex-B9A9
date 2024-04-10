@@ -9,12 +9,14 @@
 - Firebase 
 
 ## Installed Packages
+- animate.css
+- swiper slider
+- AOS Package
+
 - npm , yarn
 - Prop Types
 - react-icons
 - sweet alert2
-- animate.css
-- swiper slider
 - helmet async
 
 

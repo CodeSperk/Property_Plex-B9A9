@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import EstateCard from "./EstateCard/EstateCard";
 import { Helmet} from 'react-helmet-async';
 import HomeBanner from "./homeBanner/HomeBanner";
+import SecHeader from "../../components/SecHeader/SecHeader";
 
 const Home = () => {
   const { speciality_estates } = useLoaderData();
@@ -17,9 +18,12 @@ const Home = () => {
       
       {/* Estates Section */}
       <section className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {speciality_estates.map((estate) => (
-            <EstateCard key={estate.id} estate={estate}></EstateCard>
+       
+       <SecHeader title="Discover Your Dream Property" subTitle="Our Estates"></SecHeader>
+       
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 md:mt-12">
+          {speciality_estates.map((estate, index) => (
+            <EstateCard key={estate.id} index={index} estate={estate}></EstateCard>
           ))}
         </div>
       </section>
