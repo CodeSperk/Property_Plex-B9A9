@@ -1,0 +1,20 @@
+footer .company-name h3::before{
+  content:"";
+  position: absolute;
+  width:30px;
+  height: 20px;
+  border-bottom: 5px solid var(--clr-accent);
+  border-left: 5px solid var(--clr-accent);
+  bottom: 0;
+  left:0;
+}
+footer .company-name h3::after{
+  content:"";
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  border-top:5px solid var(--clr-accent);
+  border-right:5px solid var(--clr-accent);
+  top:0;
+  right:0;
+} 
