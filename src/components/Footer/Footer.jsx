@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./footer.css";
-import { IoCallOutline } from "react-icons/io5";
 import {
   FaFacebook,
   FaInstagramSquare,
@@ -8,8 +7,16 @@ import {
   FaWhatsappSquare,
 } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Footer = () => {
   const year = new Date().getFullYear();
+
+  AOS.init({
+    duration: 1200,
+  })
+  
 
   return (
     <footer className="bg-[#080521] text-white">
@@ -36,7 +43,7 @@ const Footer = () => {
         </div>
 
 {/* contact  */}
-        <div className="py-8 w-4/5 md:w-2/3 mx-auto bg-[#130e35] rounded-xl md:rounded-full my-6 flex flex-col md:flex-row items-center justify-center gap-4">
+        <div className="py-8 w-4/5 md:w-2/3 mx-auto bg-[#130e35] rounded-xl md:rounded-full my-6 flex flex-col md:flex-row items-center justify-center gap-4" data-aos="zoom-in">
           <p className="hidden lg:flex">Need Help?</p>
 
           <div className=" bg-[var(--bg-secondary)] rounded-full text-base  py-1 px-3 flex items-center gap-2 text-[var(--clr-primary)] font-bold">

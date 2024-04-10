@@ -35,8 +35,8 @@ body {
   font-size: 0.875rem;
   line-height: 1.6;
 }
-section {
-  padding: 3rem 0;
+section, footer {
+  margin: 3rem 0 0;
 }
 
 a {
@@ -76,8 +76,8 @@ h4 {
   body{
     font-size: 1rem;
   }
-  section {
-    padding: 5rem 0;
+  section, footer {
+    margin: 5rem 0 0;
   }
   p {
     line-height: 1.5;

@@ -1,5 +1,5 @@
 .navbar{
-  z-index: 1000;
+  z-index: 50;
 }
 .navbar .menu li a{
   background: transparent;
