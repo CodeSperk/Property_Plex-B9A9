@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 
 const EstateCard = ({ estate, index }) => {
-  const { id, estate_title, status,segment_name, area, image, facilities } = estate;
+  const { id, estate_title, status, area, image, facilities, price } = estate;
 
   const btnLink = <Link to={`/estate/${id}`}>View Property</Link>;
 
@@ -20,16 +20,22 @@ const EstateCard = ({ estate, index }) => {
   anchorPlacement: 'top-bottom',
   });
 
-
-
+  const bgColor = status.toLowerCase() === "for sale" ? "#782685" : "var(--clr-accent)";
+  
 
   return (
-    <div className="h-[470px] lg:h-[420px] bg-[var(--bg-secondary)]  border p-4 flex flex-col-reverse md:flex-row gap-4" data-aos={animationDirection}>
+    <div className="h-[650px] md:h-[450px] lg:h-[420px] bg-[var(--bg-secondary)]  border p-4 flex flex-col-reverse md:flex-row gap-4" data-aos={animationDirection}>
       
-      <div className="pt-4 flex flex-col justify-between space-y-4 md:w-1/2 ">
+      <div className="flex flex-col justify-between space-y-4 md:w-1/2 ">
         
-        <div className="ml-2">
-          <h3 className="text-2xl">{estate_title}</h3>
+       
+         
+          <h3 className="text-center border-b-2 border-[var(--clr-accent)] text-[var(--clr-accent)] text-xl tracking-wider font-semibold  uppercase px-2 py-2 rounded mb-4">
+          {estate_title}
+        </h3>
+          
+        <div>
+   
           <ul>
             <h5 className="font-semibold text-base">Facilities :</h5>
             {facilities.map((facility, idx) => (
@@ -39,29 +45,32 @@ const EstateCard = ({ estate, index }) => {
               </li>
             ))}
           </ul>
-          <div className="flex lg:flex-col gap-2 md:gap-6 mt-2 mb-6">
-            <p>
+        
+            <p className="mt-2">
               <span className="font-semibold text-base">Area : </span>{" "}
               {area}
             </p>
-            <p>
-              <span className="font-semibold text-base">Status : </span> For{" "}
-              {status}
+            <p className="mt-2 md:mt-6">
+              <span className="font-semibold">Price : </span>{" "}
+              <span className="text-lg md:text-xl font-bold">{price}</span>
             </p>
-          </div>
+           
+       
         </div>
+
         <Link to={`/estate/${id}`} className="relative cursor-pointer">
-        <Button1 btnLink={btnLink} classes="w-full border-[#4b41c1] text-[#4b41c1] font-bold bg-transparent"></Button1>
-        <FaExternalLinkAlt className="absolute top-1/2 -translate-y-1/2 right-4 text-[#4b41c1]"/>
+        <Button1 btnLink={btnLink} classes="w-full  font-bold"></Button1>
+
+        <FaExternalLinkAlt className="absolute top-1/2 -translate-y-1/2 right-4 text-white"/>
         </Link>
       </div>
 
       <div
-        className="md:w-1/2 h-1/2 md:h-full relative bg-center bg-no-repeat bg-cover"
+        className="md:w-1/2 h-1/2 md:h-full bg-center bg-no-repeat bg-cover relative"
         style={{ backgroundImage: `url(${image[0]})` }}
       >
-        <div className="absolute bottom-0 right-0 z-10 text-center bg-black bg-opacity-30 rounded-tl-md p-1 text-[var(--clr-accent)] text-white text-base">
-          {segment_name}
+        <div className={`text-sm w-fit text-white py-1 px-2 absolute right-2 top-2 rounded capitalize}`} style={{backgroundColor: bgColor}}>
+          {status}
         </div>
       </div>
     </div>

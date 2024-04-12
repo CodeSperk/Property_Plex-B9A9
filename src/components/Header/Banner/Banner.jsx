@@ -9,7 +9,6 @@ import 'aos/dist/aos.css';
 const Banner = ({ estate }) => {
 
   const {
-    id,
     estate_title,
     status,
     segment_name,
@@ -21,7 +20,6 @@ const Banner = ({ estate }) => {
     location,
     banner,
   } = estate;
-  console.log(banner);
 
 
 
@@ -33,7 +31,7 @@ const Banner = ({ estate }) => {
   return (
     <div>
       <div
-        className="h-[460px] md:h-[580px] lg:h-[730px] bg-cover bg-no-repeat bg-center"
+        className="h-[460px] md:h-[600px] lg:h-[730px] bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${banner})` }}
       >
         <div className="bg-black bg-opacity-30 z-10 h-full w-full">
@@ -44,7 +42,7 @@ const Banner = ({ estate }) => {
               <div className="flex-grow" data-aos="fade-right">
               <small className="text-xs bg-[var(--clr-accent)] py-1 px-2 font-normal uppercase rounded mb-2">{status}</small>
                 <h1 className="font-bold uppercase">
-                  Insight <br /> {estate_title}
+                {estate_title}
                 </h1>
                 <p className="mb-4 text-xl">{location}</p>
                 <div className="flex items-end gap-4">

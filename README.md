@@ -8,17 +8,11 @@
 - DaisyUI
 - Firebase 
 
-## Installed Packages
+## Required Packages applied
 - animate.css
 - swiper slider
 - AOS Package
-
-- npm , yarn
-- Prop Types
-- react-icons
-- sweet alert2
-- helmet async
-
+- React Leaflet
 
 
 

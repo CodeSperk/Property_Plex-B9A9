@@ -36,7 +36,7 @@ body {
   line-height: 1.6;
 }
 section, footer {
-  margin: 3rem 0 0;
+  margin: 4rem 0 0;
 }
 
 a {
@@ -77,7 +77,7 @@ h4 {
     font-size: 1rem;
   }
   section, footer {
-    margin: 5rem 0 0;
+    margin: 7rem 0 0;
   }
   p {
     line-height: 1.5;

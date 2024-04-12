@@ -3,6 +3,8 @@ import EstateCard from "./EstateCard/EstateCard";
 import { Helmet} from 'react-helmet-async';
 import HomeBanner from "./homeBanner/HomeBanner";
 import SecHeader from "../../components/SecHeader/SecHeader";
+import LeafletMap from "./Map/LeafletMap";
+import Explore from "./ExoploreSection/Explore";
 
 const Home = () => {
   const { speciality_estates } = useLoaderData();
@@ -27,6 +29,25 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+{/* Property Location Section */}
+      <section>
+          <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] text-center mb-8 md:mb-12">
+          <SecHeader title="Select Properties on the Map." subTitle="Property Map">
+        </SecHeader>
+          </div>
+          <LeafletMap></LeafletMap>
+      </section>
+
+      {/* Exploring section */}
+      <section className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] text-center">
+        <SecHeader title="Explore us in Just a Click" subTitle="Our Offerings">
+
+        </SecHeader>
+        <Explore></Explore>
+      </section>
+
+
     </div>
   );
 };

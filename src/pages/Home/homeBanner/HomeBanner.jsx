@@ -17,8 +17,6 @@ const HomeBanner = () => {
       slidesPerView={1}
       scrollbar={{draggable:true}}
       autoplay={{delay:3000, pauseOnMouseEnter:true}}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
           <img src="https://i.ibb.co/fqJM5kZ/home-banner-01.jpg" alt="Home banner4" />
