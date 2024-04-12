@@ -6,30 +6,20 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const EstateCard = ({ estate, index }) => {
+const EstateCard = ({ estate}) => {
   const { id, estate_title, status, area, image, facilities, price } = estate;
 
   const btnLink = <Link to={`/estate/${id}`}>View Property</Link>;
 
-  const animationDirection = index % 2 === 0 ? 'fade-right' : 'fade-left';
-
-  //Aos function
-  AOS.init();
-  AOS.init({
-  duration: 1200, 
-  anchorPlacement: 'top-bottom',
-  });
-
   const bgColor = status.toLowerCase() === "for sale" ? "#782685" : "var(--clr-accent)";
+
+  AOS.init();
   
 
   return (
-    <div className="h-[650px] md:h-[450px] lg:h-[420px] bg-[var(--bg-secondary)]  border p-4 flex flex-col-reverse md:flex-row gap-4" data-aos={animationDirection}>
+    <div className="h-[650px] md:h-[450px] lg:h-[420px] bg-[var(--bg-secondary)]  border p-4 flex flex-col-reverse md:flex-row gap-4" data-aos="fade-up">
       
       <div className="flex flex-col justify-between space-y-4 md:w-1/2 ">
-        
-       
-         
           <h3 className="text-center border-b-2 border-[var(--clr-accent)] text-[var(--clr-accent)] text-xl tracking-wider font-semibold  uppercase px-2 py-2 rounded mb-4">
           {estate_title}
         </h3>

@@ -45,6 +45,9 @@ const Navbar = () => {
       <li id="list">
         <NavLink to="/update">UpdateProfile</NavLink>
       </li>
+      <li id="list">
+        <NavLink to="/about">About</NavLink>
+      </li>
     </>
   );
   const loginBtnLink = (
@@ -86,20 +89,20 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Link to="/" className="company-name font-semibold">
+          <Link to="/" className="company-name font-semibold hidden md:block">
             <h3 className="relative px-4 py-2 text-2xl text-[var(--clr-accent)]">PropertyPlex</h3>
           </Link>
         </div>
         
 
-        <div className="hidden lg:flex animate__animated animate__backInDown animate__slower">
+        <div className="hidden lg:flex justify-center items-center animate__animated animate__backInDown animate__slower flex-grow text-center">
           <ul className="menu menu-horizontal px-1">{menuLists}</ul>
         </div>
 
        
         {user ? (
-          <div className="flex gap-3 items-center">
-            <div className="tooltip tooltip-left" data-tip={userName}>
+          <div className="flex gap-3 items-center w-fit">
+            <div className="tooltip tooltip-left w-fit" data-tip={userName}>
               <div className="w-11 h-11 border-2 border-[var(--clr-accent)] rounded-full hover:cursor-pointer">
                 <img
                   src={userPhoto}
@@ -108,10 +111,10 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <Button1 btnLink={logoutBtnLink}></Button1>
+            <Button1 btnLink={logoutBtnLink} classes="w-fit"></Button1>
           </div>
         ) : (
-          <Button1 btnLink={loginBtnLink}></Button1>
+          <Button1 btnLink={loginBtnLink} classes="w-fit"></Button1>
         )}
         </div>
    

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "profileImg": "https://i.ibb.co/yXh6Ngg/360-F-399050782-y-VZtt-ZCK8-Youfsb-Dz-HPL2x-Fz-Yt-MOlle-Z.jpg",
+    "name": "David Smith",
+    "profession": "Interior Designer",
+    "feedback": "Spacious layout, perfect for showcasing artwork. Professional staff, smooth event.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "profileImg": "https://i.ibb.co/Kj4gwKT/Screenshot-5.png",
+    "name": "Emily Johnson",
+    "profession": "Event Planner",
+    "feedback": "Versatile spaces, ideal for corporate conference. Clients and we were impressed.",
+    "rating": 4.5
+  },
+  {
+    "id": 3,
+    "profileImg": "https://i.ibb.co/MVcR7xr/360-F-460918802-XVCym-Fr7-Mozi-Fpn-Inb-TDvrlbl-Yhv-AOi2.jpg",
+    "name": "Michael Lee",
+    "profession": "Art Enthusiast",
+    "feedback": "Delightful exhibition, cozy ambiance. Appreciate showcasing local talent.",
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "profileImg": "https://i.ibb.co/GcYSGJM/Screenshot-4.png",
+    "name": "Sarah Parker",
+    "profession": "Healthcare Administrator",
+    "feedback": "Thrilled with hospital renovations. State-of-the-art facilities, compassionate staff.",
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "profileImg": "https://i.ibb.co/QDzh3bH/360-F-364211147-1qg-LVxv1-Tcq0-Ohz3-Faw-Ufrt-ONzz8nq3e.jpg",
+    "name": "Daniel Miller",
+    "profession": "Religious Leader",
+    "feedback": "Rewarding community gatherings. Tranquil surroundings, well-equipped facilities.",
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "profileImg": "https://i.ibb.co/GMh4tZN/Screenshot-3.png",
+    "name": "Jessica Thompson",
+    "profession": "Corporate Executive",
+    "feedback": "Exceptional events at Grand Convention Center. Expansive layout, top-notch amenities.",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "profileImg": "https://i.ibb.co/P6vxhwt/main-qimg-1123409acf2df2399cde89cf9353dbf5-lq.jpg",
+    "name": "Jonathan Smith",
+    "profession": "Art Curator",
+    "feedback": "Fantastic experience working with Versatile Art Gallery. Dynamic spaces, professional staff.",
+    "rating": 4.7
+  }
+]

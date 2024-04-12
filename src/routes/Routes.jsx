@@ -1,4 +1,3 @@
-import { element } from "prop-types";
 import PrivateRout from "../hooks/PrivateRout";
 import MainLayout from "../layouts/MainLayout";
 import ErrorPage from "../pages/Error/ErrorPage";
@@ -7,6 +6,7 @@ import UpdateProfile from "../pages/UpdateProfile/UpdateProfile";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import EstateDetails from "../pages/EstateDetails/EstateDetails";
+import About from "../pages/About/About";
 
 const routes = [
   {
@@ -35,7 +35,12 @@ const routes = [
         path:"/estate/:id",
         element:<PrivateRout> <EstateDetails></EstateDetails> </PrivateRout>,
         loader: (props) => fetch("/speciality_estates.json")
-      }
+      },
+      {
+        path:"/about",
+        element:<PrivateRout><About></About></PrivateRout>,
+        loader: () => fetch("/feedBackData.json")
+      },
     ]
     
     
