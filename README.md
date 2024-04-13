@@ -9,16 +9,16 @@
 
 
 ## Key Features
-1. **User Authentication**:
-  - Ena 
-2. **Profile Management**:
-  - Allowed users to update their profile information, including name & profile photo.
-3. **Protected Routes**:
-  - Ensured certain routes are protected, allowing access to authenticated users only.
-4. **Responsive Navigation**:
-  - Implemented responsive navigation bar that adjusts to different screen sizes and devices.
-5. **Feedback & Alert**:
-  - Integrated interactive feedback and alerts throughout the application, providing informative messages and confirmation dialogs. 
+- **User Authentication**:
+  Enabled users to register, log in, & log out securely using email-password, Google, GitHub methods.
+- **Profile Management**:
+  Allowed users to update their profile information, including name & profile photo.
+- **Protected Routes**:
+  Ensured certain routes are protected, allowing access to authenticated users only.
+- **Responsive Navigation**:
+  Implemented responsive navigation bar that adjusts to different screen sizes and devices.
+- **Feedback & Alert**: 
+  Integrated interactive feedback and alerts throughout the application, providing informative messages and confirmation dialogs. 
 
 
 
