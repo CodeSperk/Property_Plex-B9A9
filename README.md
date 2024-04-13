@@ -7,7 +7,6 @@
 - AOS Package
 - React Leaflet
 
-
 ## Key Features
 - **User Authentication**:
   Enabled users to register, log in, & log out securely using email-password, Google, GitHub methods.

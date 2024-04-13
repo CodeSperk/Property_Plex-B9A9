@@ -10,7 +10,7 @@
       "area": "7000 sq ft",
       "location": "Gulshan, Dhaka, Bangladesh",
       "facilities": ["Exhibition Halls", "Conference Rooms", "Restrooms"],
-      "image": ["https://i.ibb.co/7pdmHFK/art-estate-01.jpg", "art_gallery2_2.jpg", "art_gallery2_3.jpg", "art_gallery2_4.jpg"],
+      "image": ["https://i.ibb.co/7pdmHFK/art-estate-01.jpg", "https://i.ibb.co/bKmmw07/art-gallary-07.jpg", "https://i.ibb.co/g7FZbfw/art-gallary-10.jpg" ],
       "banner": "https://i.ibb.co/h73Hskn/banner-art.jpg"
     },
     {
@@ -23,7 +23,7 @@
       "area": "50000 sq ft",
       "location": "Savar, Dhaka, Bangladesh",
       "facilities": ["Exhibition Halls", "Banquet Hall", "Parking"],
-      "image": ["https://i.ibb.co/564k10J/convention-estate-01.jpg", "convention_center2_2.jpg", "convention_center2_3.jpg", "convention_center2_4.jpg"],
+      "image": ["https://i.ibb.co/564k10J/convention-estate-01.jpg", "https://i.ibb.co/R30fkr4/convention-002.jpg", "https://i.ibb.co/gMp75z0/convention-001.jpg"],
       "banner": "https://i.ibb.co/dcmyVfM/banner-convention.jpg"
     },
     {
@@ -36,8 +36,8 @@
       "area": "5000 sq ft",
       "location": "Uttara, Dhaka, Bangladesh",
       "facilities": ["Gallery Space", "Parking Lot", "Cafeteria"],
-      "image": ["https://i.ibb.co/qsgk2wb/art-estate-02.jpg", "art_gallery1_2.jpg", "art_gallery1_3.jpg", "art_gallery1_4.jpg"],
-      "banner": "https://i.ibb.co/h73Hskn/banner-art.jpg"
+      "image": ["https://i.ibb.co/qsgk2wb/art-estate-02.jpg", "https://i.ibb.co/GFq4c9X/art-009.jpg", "https://i.ibb.co/7jdVhG7/photo-1542772144-515ddfae17e9.jpg"],
+      "banner": "https://i.ibb.co/3kBJvvd/art-gallary-12.jpg"
     },
     {
       "id": 4,
@@ -49,7 +49,7 @@
       "area": "3000 sq ft",
       "location": "Shahbag, Dhaka, Bangladesh",
       "facilities": ["Prayer Hall", "Meeting Rooms", "Parking"],
-      "image": ["https://i.ibb.co/zFVskmD/religious-estate-01.jpg", "center_2.jpg", "religienter_3.jpg", "relige_center_4.jpg"],
+      "image": ["https://i.ibb.co/zFVskmD/religious-estate-01.jpg", "https://i.ibb.co/ZmKDzGD/religious-02.jpg", "https://i.ibb.co/TvvCYbr/religious-7.jpg"],
       "banner": "https://i.ibb.co/GHHf4RM/banner-religious.jpg"
     },
     {
@@ -62,7 +62,7 @@
       "area": "60000 sq ft",
       "location": "Savar, Dhaka, Bangladesh",
       "facilities": ["Emergency Room", "Operating Theaters", "Patient Rooms"],
-      "image": ["https://i.ibb.co/xGztPNr/Hospitas-estate-01.jpg", "hospital_2.jpg", "hospital_3.jpg", "hospital_4.jpg"],
+      "image": ["https://i.ibb.co/xGztPNr/Hospitas-estate-01.jpg", "https://i.ibb.co/Gsp76J4/hospital-03.jpg", "https://i.ibb.co/fSgJJy5/hospital-04.jpg"],
       "banner": "https://i.ibb.co/VLn4qhq/banner-hospital.jpg"
     }
   ]
