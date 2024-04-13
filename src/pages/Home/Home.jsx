@@ -57,7 +57,7 @@ const Home = () => {
 {/* Property Location Section */}
       <section>
           <div className="max-w-7xl mx-auto px-3 md:px-8 lg:px-12 xl:px-[55px] text-center mb-8 md:mb-12">
-          <SecHeader title="Select Properties on the Map." subTitle="Property Map">
+          <SecHeader title="Find us on the Map." subTitle="Property Map">
         </SecHeader>
           </div>
          <div data-aos="fade-up" >

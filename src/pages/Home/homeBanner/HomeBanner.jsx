@@ -44,7 +44,7 @@ const HomeBanner = () => {
       <div className='swiper-content absolute text-center text-white z-20 w-full h-full left-0 top-0 flex items-center'>
         <div className='max-w-4xl mx-auto px- space-y-1 animate__animated animate__fadeInUp mt-10'>
         <small className='text-base uppercase'>Your ideal space awaits!</small>
-        <h1 className='font-bold capitalize'>Searching for the best places? You are in the right places. </h1>
+        <h1 className='font-bold capitalize'>Searching for the best places? Book Now for Unforgettable Experiences! </h1>
         <a ><Button1 btnLink="Explore Now" classes="mt-6 py-2.5 md:py-3 px-6 md:px-10 font-semibold rounded-full w-fit mx-auto"></Button1> </a>
         </div>
       </div>
