@@ -13,7 +13,7 @@ import { useState } from "react";
 const Home = () => {
   const { speciality_estates } = useLoaderData();
   const [showAll, setShowAll] = useState(false);
-  let estateLength = 2;
+  let estateLength = 4;
   if(showAll){
     estateLength = speciality_estates.length;
   }
@@ -44,7 +44,7 @@ const Home = () => {
         </div>
 
         {
-          speciality_estates.length > 2 && 
+          speciality_estates.length > 4 && 
           <button onClick={() => setShowAll(!showAll)}
           className="w-fit mx-auto px-10 py-2 mt-8 border-2 border-[var(--clr-accent)] text-[var(--clr-accent)] text-lg font-bold transform hover:scale-125 duration-500"
         >

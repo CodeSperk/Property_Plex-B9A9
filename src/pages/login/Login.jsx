@@ -116,7 +116,7 @@ const Login = () => {
                   type="email"
                   name="email"
                   id="email"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  focus:outline-none focus:ring-0 focus:border-[var(--clr-accent)] peer"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[var(--clr-accent)] peer"
                   placeholder=" "
                   required
                 />
@@ -130,7 +130,7 @@ const Login = () => {
                   type={showPass? "text" :"password"}
                   name="password"
                   id="password"
-                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white  focus:outline-none focus:ring-0 focus:border-[var(--clr-accent)] peer"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[var(--clr-accent)] peer"
                   placeholder=" "
                   required
                 />
